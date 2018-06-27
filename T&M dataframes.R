@@ -20,3 +20,5 @@ df3 <- df1 %>%
   mutate(year = 1901:2000)
 ggplot(df3, aes(x=year, y=response)) +
   geom_line()
+
+# Goed bezig! [SZ]
