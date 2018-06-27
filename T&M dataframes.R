@@ -22,3 +22,17 @@ ggplot(df3, aes(x=year, y=response)) +
   geom_line()
 
 # Goed bezig! [SZ]
+
+# Function for time series.
+  library(lubridate)
+  create_timeseries <- function(date_start,date_end) {
+      date_start <- as.Date(date_start)
+      date_end   <- as.Date(date_end)
+      timeseries <- seq(date_start,date_end,by="day")
+      return(timeseries)
+  }
+    
+# Example create time series.
+  timeseries <- create_timeseries("2012-03-29",now())                              
+                             
+                             
